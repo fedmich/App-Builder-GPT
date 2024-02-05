@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>APP Builder</title>
+</head>
+<body>
+    <h1>APP Builder</h1>
+
+    <p>Welcome to the APP Builder! Create your web app with ease.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <form method="POST" action="./save-code.php">
+        <div class="row">
+            <!-- HTML Code Column -->
+            <div class="column">
+                <label for="htmlCode">HTML</label>
+                <textarea id="htmlCode" name="htmlCode" rows="5" cols="20" style="min-height: 400px;" required></textarea>
+            </div>
+
+            <!-- CSS Code Column -->
+            <div class="column">
+                <label for="cssCode">CSS</label>
+                <textarea id="cssCode" name="cssCode" rows="5" cols="20" style="min-height: 400px;"></textarea>
+            </div>
+
+            <!-- JS Code Column -->
+            <div class="column">
+                <label for="jsCode">JavaScript</label>
+                <textarea id="jsCode" name="jsCode" rows="5" cols="20" style="min-height: 400px;"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Download Button -->
+            <button type="submit">Download</button>
+        </div>
+    </form>
+</body>
+</html>
