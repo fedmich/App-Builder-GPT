@@ -19,3 +19,11 @@ function downloadCode() {
     })
     .catch(error => console.error('Error:', error));
 }
+
+
+
+// Event listener to trigger downloadCode on form submission
+document.getElementById('appForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+    downloadCode(); // Trigger downloadCode function
+});

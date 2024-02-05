@@ -2,3 +2,6 @@ Note our version now is 1.0
 Write this on changelog.txt
 add in the changelog,
 - Release codes to Github
+---
+
+the jscode downloadCode()  is not yet triggering, its not yet linked in our HTML page
