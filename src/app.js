@@ -4,6 +4,11 @@ function downloadCode() {
     const cssContent = document.getElementById('cssCode').value;
     const jsContent = document.getElementById('jsCode').value;
 
+    // JavaScript form validation
+    if (!validateHTML(htmlContent)) {
+        return; // Prevent form submission if HTML validation fails
+    }
+
     // Use relative path for the fetch command
     fetch('./save-code.php', {
         method: 'POST',
@@ -20,7 +25,19 @@ function downloadCode() {
     .catch(error => console.error('Error:', error));
 }
 
+// HTML validation function
+function validateHTML(htmlContent) {
+    const openingTagIndex = htmlContent.indexOf('<html');
+    const closingTagIndex = htmlContent.indexOf('</html>');
 
+    if (openingTagIndex !== -1 && closingTagIndex === -1) {
+        alert('HTML seems to be incomplete?');
+        document.getElementById('htmlCode').focus();
+        return false; // Validation failed
+    }
+
+    return true; // Validation passed
+}
 
 // Event listener to trigger downloadCode on form submission
 document.getElementById('appForm').addEventListener('submit', function (event) {

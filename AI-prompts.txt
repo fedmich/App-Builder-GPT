@@ -5,3 +5,13 @@ add in the changelog,
 ---
 
 the jscode downloadCode()  is not yet triggering, its not yet linked in our HTML page
+
+---
+
+
+We create JS validations that intercept form onsubmit
+if it fails, preventdefault the form
+
+1st validation for HTML
+ if HTML has <html, but not </html
+ show message that "HTML seems to be incomplete?" then focus on html textbox
