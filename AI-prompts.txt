@@ -1,0 +1,4 @@
+Note our version now is 1.0
+Write this on changelog.txt
+add in the changelog,
+- Release codes to Github
